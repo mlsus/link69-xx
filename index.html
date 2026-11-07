@@ -1,0 +1,414 @@
+
+<div id="bangbugs-site">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+#bangbugs-site{
+--p:#000090;
+font-family:Arial,sans-serif;
+background:#f5f6ff;
+color:#17172c;
+max-width:1100px;
+width:100%;
+margin:auto;
+overflow:hidden;
+isolation:isolate;
+}
+#bangbugs-site *{box-sizing:border-box}
+#bangbugs-site button{font-family:inherit;cursor:pointer}
+
+/* HEADER */
+#bangbugs-site .head{
+background:linear-gradient(120deg,#000050,#1717c5);
+color:white;padding:12px;
+display:flex;align-items:center;justify-content:space-between;
+}
+#bangbugs-site .btn{
+background:#ffffff20;color:white;
+border:1px solid #ffffff40;
+border-radius:8px;padding:11px;
+}
+#bangbugs-site .brand{text-align:center;flex:1}
+#bangbugs-site .brand b{
+font-size:29px;font-weight:900;
+background:linear-gradient(90deg,#fff,#ffd34d,#ff68c5,#65eaff);
+-webkit-background-clip:text;
+background-clip:text;color:transparent;
+}
+#bangbugs-site .brand small{
+display:block;color:#ddd;font-size:10px;
+}
+
+/* NAVIGATION */
+#bangbugs-site .nav{
+display:flex;background:#000075;
+}
+#bangbugs-site .nav button{
+flex:1;border:0;background:none;color:white;
+padding:15px 3px;font-size:18px;
+}
+#bangbugs-site .nav button:hover{
+background:#2929c8;color:#ffe16a;
+}
+#bangbugs-site .menu{
+display:none;background:#08085e;
+padding:10px;grid-template-columns:repeat(2,1fr);gap:8px;
+}
+#bangbugs-site .menu.show{display:grid}
+#bangbugs-site .menu button{
+background:#ffffff18;color:white;
+border:0;padding:12px;text-align:left;border-radius:6px;
+}
+#bangbugs-site .search{
+display:none;padding:10px;background:#e9eaff;
+}
+#bangbugs-site .search.show{display:block}
+#bangbugs-site .search input{
+width:100%;padding:12px;border:1px solid #bbb;
+border-radius:7px;outline:none;
+}
+
+/* CONTENT */
+#bangbugs-site .content{padding:15px}
+#bangbugs-site .heading{
+background:white;border-left:4px solid var(--p);
+padding:12px;margin-bottom:13px;
+display:flex;justify-content:space-between;
+align-items:center;color:var(--p);font-weight:bold;
+}
+#bangbugs-site .heading span{
+font-size:11px;color:#777;font-weight:normal;
+}
+
+/* VIDEO GRID */
+#bangbugs-site .gallery{
+display:grid!important;
+grid-template-columns:repeat(4,minmax(0,1fr))!important;
+gap:15px 10px;
+width:100%;
+}
+#bangbugs-site .card{
+display:block!important;
+width:100%!important;
+min-width:0!important;
+background:white!important;
+border:1px solid #e0e0f5!important;
+border-radius:8px!important;
+overflow:hidden!important;
+cursor:pointer;
+margin:0!important;
+padding:0!important;
+box-shadow:none!important;
+}
+
+/* THUMBNAIL FIX FOR BLOGGER */
+#bangbugs-site .thumb{
+display:block!important;
+position:relative!important;
+width:100%!important;
+height:auto!important;
+aspect-ratio:1.48/1!important;
+overflow:hidden!important;
+background:#ddd!important;
+margin:0!important;
+padding:0!important;
+}
+#bangbugs-site .thumb img{
+display:block!important;
+width:100%!important;
+max-width:none!important;
+min-width:100%!important;
+height:100%!important;
+max-height:none!important;
+object-fit:cover!important;
+margin:0!important;
+padding:0!important;
+border:0!important;
+float:none!important;
+}
+
+/* PLAY BUTTON */
+#bangbugs-site .quality{
+position:absolute;right:6px;top:6px;
+background:var(--p);color:white;
+padding:4px 6px;border-radius:4px;font-size:10px;
+}
+#bangbugs-site .play{
+position:absolute;top:50%;left:50%;
+transform:translate(-50%,-50%);
+background:#000090cf;color:white;
+border:2px solid white;border-radius:50%;
+width:38px;height:38px;
+display:grid;place-items:center;z-index:2;
+}
+
+/* TITLE & INFO */
+#bangbugs-site .title{
+display:block!important;
+width:auto!important;
+font-size:12px!important;
+font-weight:bold!important;
+line-height:1.5!important;
+margin:9px!important;
+padding:0!important;
+color:#111!important;
+}
+#bangbugs-site .info{
+display:flex!important;
+justify-content:space-between!important;
+align-items:center;
+gap:4px;
+margin:0 9px 10px!important;
+font-size:10px!important;
+}
+#bangbugs-site .author{
+color:var(--p);font-weight:bold;
+overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+#bangbugs-site .details{
+color:#777;white-space:nowrap;
+}
+#bangbugs-site .empty{
+grid-column:1/-1;text-align:center;
+padding:25px;background:white;
+}
+
+/* NEXT BUTTON */
+#bangbugs-site .next{
+width:100%;padding:14px;margin-top:22px;
+background:linear-gradient(120deg,#000060,#0000b5);
+border:0;border-radius:8px;color:white;font-weight:bold;
+}
+
+/* FOOTER */
+#bangbugs-site .foot{
+background:#000050;color:#ddd;
+text-align:center;padding:20px;font-size:12px;
+}
+#bangbugs-site .foot b{font-size:18px;color:white}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+#bangbugs-site .gallery{
+grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+}
+@media(max-width:550px){
+#bangbugs-site .gallery{
+grid-template-columns:repeat(2,minmax(0,1fr))!important;
+gap:12px 8px;
+}
+#bangbugs-site .content{padding:9px}
+#bangbugs-site .thumb{aspect-ratio:1.35/1!important}
+#bangbugs-site .brand b{font-size:24px}
+#bangbugs-site .nav button{font-size:16px}
+}
+</style>
+
+<!-- HEADER -->
+<header class="head">
+<button class="btn" id="bb-menu"><i class="fa fa-bars"></i></button>
+<div class="brand">
+<b>Bangbugs</b>
+<small>100% Free Movies and Hot Content</small>
+</div>
+<button class="btn" id="bb-search"><i class="fa fa-search"></i></button>
+</header>
+
+<!-- MENU -->
+<div class="menu" id="bb-menu-panel">
+<button type="button"><i class="fa fa-home"></i> Home</button>
+<button type="button"><i class="fa fa-film"></i> Movies</button>
+<button type="button"><i class="fa fa-fire"></i> Trending</button>
+<button type="button"><i class="fa fa-clock"></i> Latest</button>
+</div>
+
+<!-- SEARCH -->
+<div class="search" id="bb-search-panel">
+<input type="search" id="bb-search-input" placeholder="Search videos or creators...">
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+<button><i class="fa fa-film"></i></button>
+<button><i class="far fa-heart"></i></button>
+<button><i class="fa fa-fire"></i></button>
+<button><i class="fa fa-gamepad"></i></button>
+<button><i class="fa fa-compass"></i></button>
+<button><i class="fa fa-user"></i></button>
+<button><i class="fa fa-gear"></i></button>
+</nav>
+
+<!-- VIDEO CONTENT -->
+<main class="content">
+<div class="heading">
+<div><i class="fa fa-clapperboard"></i> Latest Videos</div>
+<span id="bb-count">25 Videos</span>
+</div>
+
+<div class="gallery" id="bb-gallery"></div>
+
+<button class="next" id="bb-next">
+NEXT PAGE <i class="fa fa-angles-right"></i>
+</button>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+<b>Bangbugs</b>
+<p>Entertainment &amp; Video Collection</p>
+<p>© 2026 Bangbugs. All Rights Reserved.</p>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+var root=document.getElementById("bangbugs-site");
+if(!root||root.dataset.ready)return;
+root.dataset.ready="1";
+
+var go="https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB";
+
+var videos=[
+["https://thumbs-gcore.xvideos-cdn.com/bf5b4fdf-1900-4a7c-bff1-d099e468cbc7/6/xv_4_t.avif","Miss priya","155.2k","18 min","1080p"],
+["https://ic-vt-nss.xhcdn.com/a/N2ZiNWNkYjI4YjRkOTgxNjVmZTZjM2RlMmZhNDQ5NmM/s(w:1280,h:720),webp/025/611/001/1280x720.17341251.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-vt-nss.xhcdn.com/a/YTNmZDNhZDA0ZDdkOGVmOTNjZjA5ZGIzN2JjOGRhY2Y/s(w:2560,h:1440),webp/031/172/527/v2/2560x1440.235.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Kajali-5.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/332e6fc3-c26d-472a-b71b-83ea20400fba/6/xv_2_t.avif","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Haseen-Raatein-2.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-nss.flixcdn.com/a/NmY3NDQ5M2NlMWNlYTZiNTJjNGFhZDE1MDE5YjBhMDk/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/Z3/Z3M2Q6/frame/original/6.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/d27b8168-8d10-4295-9991-f05ea119d11b/6/xv_22_t.avif","Lanamyers","792.7k","12 min","1440p"],
+["https://i.postimg.cc/4dckkkc4/qxl0em1208M-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFRxyIiuPEssCGKlqsliQQmzT8Gr8IpYmSlM2V_OL1VThSCO6pJOXnm4s&s=10","Cauan Wink","74.5k","8 min","1080p"],
+["https://i.postimg.cc/4yTCXLvX/fa-EA3a-ECh9I-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/11/Utha-Patak-17.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/828d56c5-5817-470b-b09f-289d9fb657fd/3/xv_7_p.avif","Myke Brazil","61.8k","11 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2026/04/Thanedaar-EP2.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2026/03/Thanedaar-EP1.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://i.postimg.cc/TwbMMMbP/80B6u-Hl3j5k-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-nss.flixcdn.com/a/YWQ0ZTdkNjQ0ZDY1NjY4NDM1ZGRmMDgxZjhkNDM5Nzg/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/1y/1yGMaI/frame/original/9.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/d59372cb-8908-4bc8-a7fd-e7bbb8708713/6/xv_6_p.avif","Sweetmegha","9.1k","38 min","1080p"],
+["https://i.postimg.cc/90j3c8PC/DKi-Dwil-MWZM-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/a013c97d-76df-40f4-94dc-6ea7896ee697/3/xv_1_p.avif","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/384577bf-2df2-4acf-938c-6014e53b2c00/6/xv_3_t.avif","Desislimgirl","18.4k","7 min","1440p"],
+["https://i.postimg.cc/mD9fff9L/0-7m-U6SKL8-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/2b92fafb-603d-4f2d-afdd-3831ab090169/6/xv_4_t.avif","Rainha Hotwife","","10 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Panchbali-2.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/976689b6-a8ee-4e0e-bf58-a9cafc3192b3/6/xv_4_t.avif","Keilafilms_studio","","13 min","1440p"]
+];
+
+var gallery=root.querySelector("#bb-gallery");
+var count=root.querySelector("#bb-count");
+
+function render(list){
+gallery.innerHTML="";
+
+if(!list.length){
+gallery.innerHTML='<div class="empty">No videos found.</div>';
+}
+
+list.forEach(function(v){
+var card=document.createElement("div");
+card.className="card";
+
+var thumb=document.createElement("div");
+thumb.className="thumb";
+
+var img=document.createElement("img");
+img.src=v[0];
+img.loading="lazy";
+img.alt="Video thumbnail";
+
+var quality=document.createElement("span");
+quality.className="quality";
+quality.textContent=v[4];
+
+var play=document.createElement("span");
+play.className="play";
+play.innerHTML='<i class="fa fa-play"></i>';
+
+thumb.appendChild(img);
+thumb.appendChild(quality);
+thumb.appendChild(play);
+
+var title=document.createElement("div");
+title.className="title";
+title.textContent="Click to continue watching this video.";
+
+var info=document.createElement("div");
+info.className="info";
+
+var author=document.createElement("span");
+author.className="author";
+author.textContent=v[1];
+
+var details=document.createElement("span");
+details.className="details";
+details.textContent=(v[2]?v[2]+" ":"")+v[3];
+
+info.appendChild(author);
+info.appendChild(details);
+
+card.appendChild(thumb);
+card.appendChild(title);
+card.appendChild(info);
+
+card.addEventListener("click",function(){
+window.location.href=go;
+});
+
+gallery.appendChild(card);
+});
+
+count.textContent=list.length+" Videos";
+}
+
+render(videos);
+
+/* MENU */
+root.querySelector("#bb-menu").onclick=function(){
+root.querySelector("#bb-menu-panel").classList.toggle("show");
+};
+
+/* SEARCH */
+root.querySelector("#bb-search").onclick=function(){
+var p=root.querySelector("#bb-search-panel");
+p.classList.toggle("show");
+if(p.classList.contains("show")){
+root.querySelector("#bb-search-input").focus();
+}
+};
+
+root.querySelector("#bb-search-input").oninput=function(){
+var q=this.value.toLowerCase().trim();
+render(videos.filter(function(v){
+return v[1].toLowerCase().includes(q);
+}));
+};
+
+/* NEXT BUTTON */
+root.querySelector("#bb-next").onclick=function(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+};
+
+})();
+</script>
+  
+  <script>
+(function(){
+  "use strict";
+
+  var redirectURL = "https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB";
+
+  document.getElementById("bangbugs-site").addEventListener("click", function(){
+    window.location.href = redirectURL;
+  }, true);
+
+})();
+</script>
+  
+</div>
