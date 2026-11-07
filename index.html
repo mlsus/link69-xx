@@ -2,240 +2,178 @@
 <div id="bangbugs">
 <style>
 #bangbugs{
- --blue:#000090;
- --bg:#090a10;
- --card:#151722;
- --text:#f5f5f5;
- --muted:#999;
- background:var(--bg);
- color:var(--text);
+ background:#fff;color:#222;
  font-family:Arial,sans-serif;
- width:100%;
- margin:0 auto;
- padding:12px;
- box-sizing:border-box;
+ width:100%;padding:10px;
+ margin:0 auto;box-sizing:border-box
 }
 #bangbugs *{box-sizing:border-box}
-#bangbugs .head{
- display:flex;
- align-items:center;
- justify-content:space-between;
- padding:12px 5px 18px;
- border-bottom:1px solid #252638;
- margin-bottom:18px;
-}
-#bangbugs .logo{
- font-size:23px;
- font-weight:900;
- color:white;
-}
-#bangbugs .logo span{color:#6868ff}
-#bangbugs .tag{
- background:var(--blue);
- padding:7px 12px;
- border-radius:5px;
- font-size:11px;
- font-weight:bold;
-}
-#bangbugs .section{
- font-size:17px;
- font-weight:bold;
- margin:12px 0 15px;
-}
 #bangbugs .videos{
  display:grid;
  grid-template-columns:repeat(4,minmax(0,1fr));
- gap:12px;
+ gap:12px
 }
 #bangbugs .mv-card{
  display:block;
- background:var(--card);
- color:white;
  text-decoration:none;
- overflow:hidden;
- border-radius:8px;
- border:1px solid #252638;
- min-width:0;
- transition:.2s;
-}
-#bangbugs .mv-card:hover{
- border-color:#5555ff;
- transform:translateY(-2px);
+ color:#222;background:#fff;
+ border:1px solid #eee;
+ border-radius:7px;overflow:hidden;
+ min-width:0
 }
 #bangbugs .mv-thumb{
- position:relative;
+ position:relative!important;
  aspect-ratio:16/9;
- background:#202130;
- overflow:hidden;
+ background:#eee;
+ overflow:hidden
 }
 #bangbugs .mv-thumb img{
- width:100%;
- height:100%;
- object-fit:cover;
- display:block;
+ width:100%;height:100%;
+ object-fit:cover;display:block
 }
 #bangbugs .mv-quality{
- position:absolute;
- right:6px;
- bottom:6px;
+ position:absolute!important;
+ top:7px!important;
+ right:7px!important;
+ bottom:auto!important;
+ left:auto!important;
+ z-index:10;
  background:#000090;
- color:white;
- padding:4px 6px;
- border-radius:3px;
+ color:#fff;
+ padding:4px 7px;
  font-size:10px;
- font-weight:bold;
+ border-radius:3px;
+ font-weight:bold
 }
 #bangbugs .mv-title{
  font-size:12px;
- line-height:1.45;
  font-weight:bold;
- padding:9px 9px 5px;
- display:-webkit-box;
- -webkit-line-clamp:2;
- -webkit-box-orient:vertical;
- overflow:hidden;
+ line-height:1.4;
+ padding:8px 8px 4px
 }
 #bangbugs .mv-info{
  display:flex;
- align-items:center;
  gap:7px;
- flex-wrap:wrap;
- padding:3px 9px 10px;
+ align-items:center;
+ padding:3px 8px 9px;
  font-size:10px;
- color:var(--muted);
+ color:#777
 }
-#bangbugs .mv-info span{color:#9999ff}
+#bangbugs .mv-info span:first-child{color:#000090}
 #bangbugs .mv-info b{
  margin-left:auto;
- color:#ddd;
- font-weight:normal;
+ font-weight:normal
 }
 #bangbugs .mv-next-wrap{
- text-align:center;
- padding:25px 0 15px;
+ text-align:center;padding:22px 0
 }
 #bangbugs .mv-next{
  display:inline-block;
- background:var(--blue);
- color:white;
- text-decoration:none;
+ background:#000090;color:#fff;
  padding:12px 35px;
  border-radius:5px;
- font-size:13px;
- font-weight:bold;
-}
-#bangbugs .footer{
- text-align:center;
- color:#777;
- font-size:11px;
- border-top:1px solid #252638;
- padding:18px 5px;
- margin-top:15px;
+ text-decoration:none;
+ font-size:13px;font-weight:bold
 }
 @media(max-width:700px){
- #bangbugs .videos{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
- #bangbugs{padding:9px}
- #bangbugs .mv-title{font-size:11px;padding:7px}
- #bangbugs .mv-info{padding:3px 7px 8px}
+ #bangbugs{padding:7px}
+ #bangbugs .videos{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px
+ }
+ #bangbugs .mv-title{font-size:11px}
 }
 @media(min-width:1100px){
- #bangbugs .videos{grid-template-columns:repeat(5,minmax(0,1fr))}
+ #bangbugs .videos{
+  grid-template-columns:repeat(5,minmax(0,1fr))
+ }
 }
 </style>
-
-<div class="head">
- <div class="logo">Bang<span>bugs</span></div>
- <div class="tag">VIDEO GALLERY</div>
-</div>
-
-<div class="section">▶ Latest Videos</div>
 
 <div class="videos" id="mvVideos"></div>
 
 <div class="mv-next-wrap">
- <a class="mv-next" href="https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB" target="_blank" rel="noopener">NEXT PAGE »</a>
-</div>
-
-<div class="footer">
- © 2026 Bangbugs. All Rights Reserved.
+<a class="mv-next" href="https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB" target="_blank" rel="noopener noreferrer">NEXT PAGE »</a>
 </div>
 
 <script>
 (function(){
- const destination="https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB";
 
- const videos=[
- ["https://thumbs-gcore.xvideos-cdn.com/bf5b4fdf-1900-4a7c-bff1-d099e468cbc7/6/xv_4_t.avif","Miss priya","155.2k","18 min","1080p"],
- ["https://ic-vt-nss.xhcdn.com/a/N2ZiNWNkYjI4YjRkOTgxNjVmZTZjM2RlMmZhNDQ5NmM/s(w:1280,h:720),webp/025/611/001/1280x720.17341251.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://ic-vt-nss.xhcdn.com/a/YTNmZDNhZDA0ZDdkOGVmOTNjZjA5ZGIzN2JjOGRhY2Y/s(w:2560,h:1440),webp/031/172/527/v2/2560x1440.235.webp","Cauan Wink","74.5k","8 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Kajali-5.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/332e6fc3-c26d-472a-b71b-83ea20400fba/6/xv_2_t.avif","Cauan Wink","74.5k","8 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Haseen-Raatein-2.webp","Cauan Wink","74.5k","8 min","1080p"],
- ["https://ic-nss.flixcdn.com/a/NmY3NDQ5M2NlMWNlYTZiNTJjNGFhZDE1MDE5YjBhMDk/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/Z3/Z3M2Q6/frame/original/6.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/d27b8168-8d10-4295-9991-f05ea119d11b/6/xv_22_t.avif","Lanamyers","792.7k","12 min","1440p"],
- ["https://i.postimg.cc/4dckkkc4/qxl0em1208M-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFRxyIiuPEssCGKlqsliQQmzT8Gr8IpYmSlM2V_OL1VThSCO6pJOXnm4s&s=10","Cauan Wink","74.5k","8 min","1080p"],
- ["https://i.postimg.cc/4yTCXLvX/fa-EA3a-ECh9I-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2025/11/Utha-Patak-17.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/828d56c5-5817-470b-b09f-289d9fb657fd/3/xv_7_p.avif","Myke Brazil","61.8k","11 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2026/04/Thanedaar-EP2.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2026/03/Thanedaar-EP1.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://i.postimg.cc/TwbMMMbP/80B6u-Hl3j5k-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://ic-nss.flixcdn.com/a/YWQ0ZTdkNjQ0ZDY1NjY4NDM1ZGRmMDgxZjhkNDM5Nzg/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/1y/1yGMaI/frame/original/9.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/d59372cb-8908-4bc8-a7fd-e7bbb8708713/6/xv_6_p.avif","Sweetmegha","9.1k","38 min","1080p"],
- ["https://i.postimg.cc/90j3c8PC/DKi-Dwil-MWZM-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/a013c97d-76df-40f4-94dc-6ea7896ee697/3/xv_1_p.avif","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/384577bf-2df2-4acf-938c-6014e53b2c00/6/xv_3_t.avif","Desislimgirl","18.4k","7 min","1440p"],
- ["https://i.postimg.cc/mD9fff9L/0-7m-U6SKL8-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/2b92fafb-603d-4f2d-afdd-3831ab090169/6/xv_4_t.avif","Rainha Hotwife","","10 min","1080p"],
- ["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Panchbali-2.webp","Cauan Wink","74.5k","8 min","1080p"],
- ["https://thumb-cdn77.xvideos-cdn.com/976689b6-a8ee-4e0e-bf58-a9cafc3192b3/6/xv_4_t.avif","Keilafilms_studio","","13 min","1440p"]
- ];
+const destination="https://www.google.com/url?q=https%3A%2F%2Fcariousthoughtearl.com%2Fpynxydkcf%3Fkey%3D9fcaaab1932732baaffa3314295d33af&sa=D&sntz=1&usg=AOvVaw38tGnz9h6OJJ-ImwLMNdrB";
 
- const container=document.getElementById("mvVideos");
+const videos=[
+["https://thumbs-gcore.xvideos-cdn.com/bf5b4fdf-1900-4a7c-bff1-d099e468cbc7/6/xv_4_t.avif","Miss priya","155.2k","18 min","1080p"],
+["https://ic-vt-nss.xhcdn.com/a/N2ZiNWNkYjI4YjRkOTgxNjVmZTZjM2RlMmZhNDQ5NmM/s(w:1280,h:720),webp/025/611/001/1280x720.17341251.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-vt-nss.xhcdn.com/a/YTNmZDNhZDA0ZDdkOGVmOTNjZjA5ZGIzN2JjOGRhY2Y/s(w:2560,h:1440),webp/031/172/527/v2/2560x1440.235.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Kajali-5.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/332e6fc3-c26d-472a-b71b-83ea20400fba/6/xv_2_t.avif","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Haseen-Raatein-2.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-nss.flixcdn.com/a/NmY3NDQ5M2NlMWNlYTZiNTJjNGFhZDE1MDE5YjBhMDk/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/Z3/Z3M2Q6/frame/original/6.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/d27b8168-8d10-4295-9991-f05ea119d11b/6/xv_22_t.avif","Lanamyers","792.7k","12 min","1440p"],
+["https://i.postimg.cc/4dckkkc4/qxl0em1208M-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFRxyIiuPEssCGKlqsliQQmzT8Gr8IpYmSlM2V_OL1VThSCO6pJOXnm4s&s=10","Cauan Wink","74.5k","8 min","1080p"],
+["https://i.postimg.cc/4yTCXLvX/fa-EA3a-ECh9I-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/11/Utha-Patak-17.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/828d56c5-5817-470b-b09f-289d9fb657fd/3/xv_7_p.avif","Myke Brazil","61.8k","11 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2026/04/Thanedaar-EP2.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2026/03/Thanedaar-EP1.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://i.postimg.cc/TwbMMMbP/80B6u-Hl3j5k-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://ic-nss.flixcdn.com/a/YWQ0ZTdkNjQ0ZDY1NjY4NDM1ZGRmMDgxZjhkNDM5Nzg/webp%2Cs%28w%3A704%2Ch%3A440%29/xc/1y/1yGMaI/frame/original/9.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/d59372cb-8908-4bc8-a7fd-e7bbb8708713/6/xv_6_p.avif","Sweetmegha","9.1k","38 min","1080p"],
+["https://i.postimg.cc/90j3c8PC/DKi-Dwil-MWZM-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/a013c97d-76df-40f4-94dc-6ea7896ee697/3/xv_1_p.avif","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/384577bf-2df2-4acf-938c-6014e53b2c00/6/xv_3_t.avif","Desislimgirl","18.4k","7 min","1440p"],
+["https://i.postimg.cc/mD9fff9L/0-7m-U6SKL8-HD.jpg","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/2b92fafb-603d-4f2d-afdd-3831ab090169/6/xv_4_t.avif","Rainha Hotwife","","10 min","1080p"],
+["https://www.uncutdesiporn.com/wp-content/uploads/2025/10/Panchbali-2.webp","Cauan Wink","74.5k","8 min","1080p"],
+["https://thumb-cdn77.xvideos-cdn.com/976689b6-a8ee-4e0e-bf58-a9cafc3192b3/6/xv_4_t.avif","Keilafilms_studio","","13 min","1440p"]
+];
 
- videos.forEach((v,i)=>{
-  const a=document.createElement("a");
-  a.className="mv-card";
-  a.href=destination;
-  a.target="_blank";
-  a.rel="noopener noreferrer";
+const box=document.getElementById("mvVideos");
 
-  const thumb=document.createElement("div");
-  thumb.className="mv-thumb";
+videos.forEach((v,i)=>{
+ const a=document.createElement("a");
+ a.className="mv-card";
+ a.href=destination;
+ a.target="_blank";
+ a.rel="noopener noreferrer";
 
-  const img=document.createElement("img");
-  img.src=v[0];
-  img.alt="Video thumbnail "+(i+1);
-  img.loading="lazy";
-  img.decoding="async";
+ const thumb=document.createElement("div");
+ thumb.className="mv-thumb";
 
-  const quality=document.createElement("span");
-  quality.className="mv-quality";
-  quality.textContent=v[4];
+ const img=document.createElement("img");
+ img.src=v[0];
+ img.alt="Video thumbnail "+(i+1);
+ img.loading="lazy";
+ img.decoding="async";
 
-  thumb.append(img,quality);
+ const quality=document.createElement("span");
+ quality.className="mv-quality";
+ quality.textContent=v[4];
 
-  const title=document.createElement("div");
-  title.className="mv-title";
-  title.textContent="Click to continue watching this video.";
+ thumb.append(img,quality);
 
-  const info=document.createElement("div");
-  info.className="mv-info";
+ const title=document.createElement("div");
+ title.className="mv-title";
+ title.textContent="Click below to continue watching.";
 
-  const name=document.createElement("span");
-  name.textContent=v[1];
+ const info=document.createElement("div");
+ info.className="mv-info";
 
-  const views=document.createElement("span");
-  views.textContent=v[2];
+ const name=document.createElement("span");
+ name.textContent=v[1];
 
-  const duration=document.createElement("b");
-  duration.textContent=v[3];
+ const views=document.createElement("span");
+ views.textContent=v[2];
 
-  info.append(name,views,duration);
-  a.append(thumb,title,info);
-  container.appendChild(a);
- });
+ const duration=document.createElement("b");
+ duration.textContent=v[3];
+
+ info.append(name,views,duration);
+ a.append(thumb,title,info);
+ box.appendChild(a);
+});
+
 })();
 </script>
 </div>
