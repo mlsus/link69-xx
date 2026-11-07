@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangbugs</title>
+</head>
+<body>
 <div id="bangbugs-site">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -16,8 +23,6 @@ isolation:isolate;
 }
 #bangbugs-site *{box-sizing:border-box}
 #bangbugs-site button{font-family:inherit;cursor:pointer}
-
-/* HEADER */
 #bangbugs-site .head{
 background:linear-gradient(120deg,#000050,#1717c5);
 display:flex;align-items:center;justify-content:space-between;
@@ -31,172 +36,91 @@ border-radius:8px;padding:11px;
 #bangbugs-site .brand b{
 font-size:29px;font-weight:900;
 background:linear-gradient(90deg,#fff,#ffd34d,#ff68c5,#65eaff);
--webkit-background-clip:text;
-background-clip:text;color:transparent;
+-webkit-background-clip:text;background-clip:text;color:transparent;
 }
-#bangbugs-site .brand small{
-display:block;color:#ddd;font-size:10px;
-}
-
-/* NAVIGATION */
-#bangbugs-site .nav{
-display:flex;background:#000075;
-}
+#bangbugs-site .brand small{display:block;color:#ddd;font-size:10px}
+#bangbugs-site .nav{display:flex;background:#000075}
 #bangbugs-site .nav button{
-flex:1;border:0;background:none;color:white;
-padding:15px 3px;font-size:18px;
+flex:1;border:0;background:none;color:white;padding:15px 3px;font-size:18px;
 }
-#bangbugs-site .nav button:hover{
-background:#2929c8;color:#ffe16a;
-}
+#bangbugs-site .nav button:hover{background:#2929c8;color:#ffe16a}
 #bangbugs-site .menu{
-display:none;background:#08085e;
-padding:10px;grid-template-columns:repeat(2,1fr);gap:8px;
+display:none;background:#08085e;padding:10px;
+grid-template-columns:repeat(2,1fr);gap:8px;
 }
 #bangbugs-site .menu.show{display:grid}
 #bangbugs-site .menu button{
-background:#ffffff18;color:white;
-border:0;padding:12px;text-align:left;border-radius:6px;
+background:#ffffff18;color:white;border:0;padding:12px;
+text-align:left;border-radius:6px;
 }
-#bangbugs-site .search{
-display:none;padding:10px;background:#e9eaff;
-}
+#bangbugs-site .search{display:none;padding:10px;background:#e9eaff}
 #bangbugs-site .search.show{display:block}
 #bangbugs-site .search input{
-width:100%;padding:12px;border:1px solid #bbb;
-border-radius:7px;outline:none;
+width:100%;padding:12px;border:1px solid #bbb;border-radius:7px;outline:none;
 }
-
-/* CONTENT */
 #bangbugs-site .content{padding:15px}
 #bangbugs-site .heading{
-background:white;border-left:4px solid var(--p);
-padding:12px;margin-bottom:13px;
-display:flex;justify-content:space-between;
-align-items:center;color:var(--p);font-weight:bold;
+background:white;border-left:4px solid var(--p);padding:12px;margin-bottom:13px;
+display:flex;justify-content:space-between;align-items:center;
+color:var(--p);font-weight:bold;
 }
-#bangbugs-site .heading span{
-font-size:11px;color:#777;font-weight:normal;
-}
-
-/* VIDEO GRID */
+#bangbugs-site .heading span{font-size:11px;color:#777;font-weight:normal}
 #bangbugs-site .gallery{
-display:grid!important;
-grid-template-columns:repeat(4,minmax(0,1fr))!important;
-gap:15px 10px;
-width:100%;
+display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+gap:15px 10px;width:100%;
 }
 #bangbugs-site .card{
-display:block!important;
-width:100%!important;
-min-width:0!important;
-background:white!important;
-border:1px solid #e0e0f5!important;
-border-radius:8px!important;
-overflow:hidden!important;
-cursor:pointer;
-margin:0!important;
-padding:0!important;
-box-shadow:none!important;
+display:block!important;width:100%!important;min-width:0!important;
+background:white!important;border:1px solid #e0e0f5!important;
+border-radius:8px!important;overflow:hidden!important;cursor:pointer;
+margin:0!important;padding:0!important;box-shadow:none!important;
 }
-
-/* THUMBNAIL FIX FOR BLOGGER */
 #bangbugs-site .thumb{
-display:block!important;
-position:relative!important;
-width:100%!important;
-height:auto!important;
-aspect-ratio:1.48/1!important;
-overflow:hidden!important;
-background:#ddd!important;
-margin:0!important;
-padding:0!important;
+display:block!important;position:relative!important;width:100%!important;
+height:auto!important;aspect-ratio:1.48/1!important;overflow:hidden!important;
+background:#ddd!important;margin:0!important;padding:0!important;
 }
 #bangbugs-site .thumb img{
-display:block!important;
-width:100%!important;
-max-width:none!important;
-min-width:100%!important;
-height:100%!important;
-max-height:none!important;
-object-fit:cover!important;
-margin:0!important;
-padding:0!important;
-border:0!important;
-float:none!important;
+display:block!important;width:100%!important;max-width:none!important;
+min-width:100%!important;height:100%!important;max-height:none!important;
+object-fit:cover!important;margin:0!important;padding:0!important;
+border:0!important;float:none!important;
 }
-
-/* PLAY BUTTON */
 #bangbugs-site .quality{
-position:absolute;right:6px;top:6px;
-background:var(--p);color:white;
+position:absolute;right:6px;top:6px;background:var(--p);color:white;
 padding:4px 6px;border-radius:4px;font-size:10px;
 }
 #bangbugs-site .play{
-position:absolute;top:50%;left:50%;
-transform:translate(-50%,-50%);
-background:#000090cf;color:white;
-border:2px solid white;border-radius:50%;
-width:38px;height:38px;
-display:grid;place-items:center;z-index:2;
+position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+background:#000090cf;color:white;border:2px solid white;border-radius:50%;
+width:38px;height:38px;display:grid;place-items:center;z-index:2;
 }
-
-/* TITLE & INFO */
 #bangbugs-site .title{
-display:block!important;
-width:auto!important;
-font-size:12px!important;
-font-weight:bold!important;
-line-height:1.5!important;
-margin:9px!important;
-padding:0!important;
-color:#111!important;
+display:block!important;width:auto!important;font-size:12px!important;
+font-weight:bold!important;line-height:1.5!important;margin:9px!important;
+padding:0!important;color:#111!important;
 }
 #bangbugs-site .info{
-display:flex!important;
-justify-content:space-between!important;
-align-items:center;
-gap:4px;
-margin:0 9px 10px!important;
-font-size:10px!important;
+display:flex!important;justify-content:space-between!important;align-items:center;
+gap:4px;margin:0 9px 10px!important;font-size:10px!important;
 }
 #bangbugs-site .author{
-color:var(--p);font-weight:bold;
-overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+color:var(--p);font-weight:bold;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
-#bangbugs-site .details{
-color:#777;white-space:nowrap;
-}
-#bangbugs-site .empty{
-grid-column:1/-1;text-align:center;
-padding:25px;background:white;
-}
-
-/* NEXT BUTTON */
+#bangbugs-site .details{color:#777;white-space:nowrap}
+#bangbugs-site .empty{grid-column:1/-1;text-align:center;padding:25px;background:white}
 #bangbugs-site .next{
 width:100%;padding:14px;margin-top:22px;
 background:linear-gradient(120deg,#000060,#0000b5);
 border:0;border-radius:8px;color:white;font-weight:bold;
 }
-
-/* FOOTER */
-#bangbugs-site .foot{
-background:#000050;color:#ddd;
-text-align:center;padding:20px;font-size:12px;
-}
+#bangbugs-site .foot{background:#000050;color:#ddd;text-align:center;padding:20px;font-size:12px}
 #bangbugs-site .foot b{font-size:18px;color:white}
-
-/* RESPONSIVE */
 @media(max-width:800px){
-#bangbugs-site .gallery{
-grid-template-columns:repeat(3,minmax(0,1fr))!important;
-}
+#bangbugs-site .gallery{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 }
 @media(max-width:550px){
-#bangbugs-site .gallery{
-grid-template-columns:repeat(2,minmax(0,1fr))!important;
-gap:12px 8px;
-}
+#bangbugs-site .gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px 8px}
 #bangbugs-site .content{padding:9px}
 #bangbugs-site .thumb{aspect-ratio:1.35/1!important}
 #bangbugs-site .brand b{font-size:24px}
@@ -204,17 +128,12 @@ gap:12px 8px;
 }
 </style>
 
-<!-- HEADER -->
 <header class="head">
-<button class="btn" id="bb-menu"><i class="fa fa-bars"></i></button>
-<div class="brand">
-<b>Bangbugs</b>
-<small>100% Free Movies and Hot Content</small>
-</div>
-<button class="btn" id="bb-search"><i class="fa fa-search"></i></button>
+<button class="btn" id="bb-menu" type="button" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+<div class="brand"><b>Bangbugs</b><small>100% Free Movies and Hot Content</small></div>
+<button class="btn" id="bb-search" type="button" aria-label="Open search"><i class="fa fa-search"></i></button>
 </header>
 
-<!-- MENU -->
 <div class="menu" id="bb-menu-panel">
 <button type="button"><i class="fa fa-home"></i> Home</button>
 <button type="button"><i class="fa fa-film"></i> Movies</button>
@@ -222,37 +141,29 @@ gap:12px 8px;
 <button type="button"><i class="fa fa-clock"></i> Latest</button>
 </div>
 
-<!-- SEARCH -->
 <div class="search" id="bb-search-panel">
 <input type="search" id="bb-search-input" placeholder="Search videos or creators...">
 </div>
 
-<!-- NAVIGATION -->
-<nav class="nav">
-<button><i class="fa fa-film"></i></button>
-<button><i class="far fa-heart"></i></button>
-<button><i class="fa fa-fire"></i></button>
-<button><i class="fa fa-gamepad"></i></button>
-<button><i class="fa fa-compass"></i></button>
-<button><i class="fa fa-user"></i></button>
-<button><i class="fa fa-gear"></i></button>
+<nav class="nav" aria-label="Main navigation">
+<button type="button" aria-label="Movies"><i class="fa fa-film"></i></button>
+<button type="button" aria-label="Favorites"><i class="far fa-heart"></i></button>
+<button type="button" aria-label="Trending"><i class="fa fa-fire"></i></button>
+<button type="button" aria-label="Games"><i class="fa fa-gamepad"></i></button>
+<button type="button" aria-label="Explore"><i class="fa fa-compass"></i></button>
+<button type="button" aria-label="Profile"><i class="fa fa-user"></i></button>
+<button type="button" aria-label="Settings"><i class="fa fa-gear"></i></button>
 </nav>
 
-<!-- VIDEO CONTENT -->
 <main class="content">
 <div class="heading">
 <div><i class="fa fa-clapperboard"></i> Latest Videos</div>
 <span id="bb-count">25 Videos</span>
 </div>
-
 <div class="gallery" id="bb-gallery"></div>
-
-<button class="next" id="bb-next">
-NEXT PAGE <i class="fa fa-angles-right"></i>
-</button>
+<button class="next" id="bb-next" type="button">NEXT PAGE <i class="fa fa-angles-right"></i></button>
 </main>
 
-<!-- FOOTER -->
 <footer class="foot">
 <b>Bangbugs</b>
 <p>Entertainment &amp; Video Collection</p>
@@ -262,7 +173,6 @@ NEXT PAGE <i class="fa fa-angles-right"></i>
 <script>
 (function(){
 "use strict";
-
 var root=document.getElementById("bangbugs-site");
 if(!root||root.dataset.ready)return;
 root.dataset.ready="1";
@@ -302,102 +212,46 @@ var count=root.querySelector("#bb-count");
 
 function render(list){
 gallery.innerHTML="";
-
-if(!list.length){
-gallery.innerHTML='<div class="empty">No videos found.</div>';
-}
-
+if(!list.length)gallery.innerHTML='<div class="empty">No videos found.</div>';
 list.forEach(function(v){
-var card=document.createElement("div");
-card.className="card";
-
-var thumb=document.createElement("div");
-thumb.className="thumb";
-
-var img=document.createElement("img");
-img.src=v[0];
-img.loading="lazy";
-img.alt="Video thumbnail";
-
-var quality=document.createElement("span");
-quality.className="quality";
-quality.textContent=v[4];
-
-var play=document.createElement("span");
-play.className="play";
-play.innerHTML='<i class="fa fa-play"></i>';
-
-thumb.appendChild(img);
-thumb.appendChild(quality);
-thumb.appendChild(play);
-
-var title=document.createElement("div");
-title.className="title";
-title.textContent="Click to continue watching this video.";
-
-var info=document.createElement("div");
-info.className="info";
-
-var author=document.createElement("span");
-author.className="author";
-author.textContent=v[1];
-
-var details=document.createElement("span");
-details.className="details";
-details.textContent=(v[2]?v[2]+" ":"")+v[3];
-
-info.appendChild(author);
-info.appendChild(details);
-
-card.appendChild(thumb);
-card.appendChild(title);
-card.appendChild(info);
-
-card.addEventListener("click",function(){
-window.location.href=go;
-});
-
+var card=document.createElement("div");card.className="card";
+var thumb=document.createElement("div");thumb.className="thumb";
+var img=document.createElement("img");img.src=v[0];img.loading="lazy";img.alt="Video thumbnail";
+var quality=document.createElement("span");quality.className="quality";quality.textContent=v[4];
+var play=document.createElement("span");play.className="play";play.innerHTML='<i class="fa fa-play"></i>';
+thumb.appendChild(img);thumb.appendChild(quality);thumb.appendChild(play);
+var title=document.createElement("div");title.className="title";title.textContent="Click to continue watching this video.";
+var info=document.createElement("div");info.className="info";
+var author=document.createElement("span");author.className="author";author.textContent=v[1];
+var details=document.createElement("span");details.className="details";details.textContent=(v[2]?v[2]+" ":"")+v[3];
+info.appendChild(author);info.appendChild(details);
+card.appendChild(thumb);card.appendChild(title);card.appendChild(info);
+card.addEventListener("click",function(){window.location.href=go;});
 gallery.appendChild(card);
 });
-
 count.textContent=list.length+" Videos";
 }
-
 render(videos);
 
-/* MENU */
 root.querySelector("#bb-menu").onclick=function(){
 root.querySelector("#bb-menu-panel").classList.toggle("show");
 };
-
-/* SEARCH */
 root.querySelector("#bb-search").onclick=function(){
-var p=root.querySelector("#bb-search-panel");
-p.classList.toggle("show");
-if(p.classList.contains("show")){
-root.querySelector("#bb-search-input").focus();
-}
+var p=root.querySelector("#bb-search-panel");p.classList.toggle("show");
+if(p.classList.contains("show"))root.querySelector("#bb-search-input").focus();
 };
-
 root.querySelector("#bb-search-input").oninput=function(){
 var q=this.value.toLowerCase().trim();
-render(videos.filter(function(v){
-return v[1].toLowerCase().includes(q);
-}));
+render(videos.filter(function(v){return v[1].toLowerCase().includes(q);}));
 };
-
-/* NEXT BUTTON */
 root.querySelector("#bb-next").onclick=function(){
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+window.scrollTo({top:0,behavior:"smooth"});
 };
-
 })();
 </script>
-  
-  <script>
+</div>
+
+<script>
 (function(){
   "use strict";
 
@@ -409,5 +263,7 @@ behavior:"smooth"
 
 })();
 </script>
+
   
-</div>
+</body>
+</html>
